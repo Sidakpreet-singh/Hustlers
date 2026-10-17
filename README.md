@@ -1,65 +1,36 @@
-# 🛒 SkyMart — E-Commerce Web Application
+# Hustlers
 
-SkyMart is a modern and responsive e-commerce web application built with **React.js**. It provides a smooth shopping experience with product browsing, dynamic product details, category filtering, search, sorting, cart management, and responsive UI.
+SkyMart is a responsive React storefront with product browsing, search, category and price filters, sorting, product details, and a shopping cart.
 
-The project focuses on building a real-world React application while practicing **component-based architecture, React Context API, routing, dynamic routes, state management, and API integration**.
+## Stack
 
----
+- React 19 and React Router
+- Vite
+- Tailwind CSS 4
+- DummyJSON Products API
 
-## ✨ Features
+## Run locally
 
-- 🏠 Modern responsive homepage
-- 🛍️ Product listing and shopping page
-- 🔎 Product search
-- 🗂️ Category-based filtering
-- 💰 Price-based filtering
-- ⭐ Product rating sorting
-- 📊 Multiple product sorting options
-- 📦 Dynamic product details pages
-- 🔗 Dynamic routing using React Router
-- 🛒 Add products to cart
-- ➕ Increase product quantity
-- ➖ Decrease product quantity
-- 🧮 Dynamic cart quantity management
-- 📱 Responsive design
-- 🎨 Clean and modern UI
-- ⚡ API-based product data
+```sh
+npm ci
+npm run dev
+```
 
----
+## Deploy to GitHub Pages
 
-## 🛠️ Tech Stack
+The included GitHub Actions workflow builds and deploys the site whenever code is pushed to `main`. It also publishes a `404.html` fallback so direct links to client-side routes continue to work.
 
-### Frontend
+1. In the repository, open **Settings → Pages**.
+2. Set **Build and deployment → Source** to **GitHub Actions**.
+3. Push a commit to `main`, or run **Deploy to GitHub Pages** from the Actions tab.
 
-- **React.js**
-- **JavaScript**
-- **React Router**
-- **Tailwind CSS**
-- **Axios**
-- **Context API**
+The build uses `/Hustlers/` as its base path on GitHub Pages and `/` for local development and root-domain hosting. React Router reads the same base path automatically.
 
-### API
+## Commands
 
-Product data is fetched from:
-
-**DummyJSON Products API**
-
----
-
-## 📂 Project Structure
-
-```text
-SkyMart/
-│
-├── public/
-│
-├── src/
-│   │
-│   ├── Components/
-│   │   ├── Navbar.jsx
-│   │   ├── ProductCard.jsx
-│   │   └── ...
-│   │
-│   ├── Pages/
-│   │   ├── Home.jsx
-│   │   ├── Shop.jsx
+```sh
+npm run dev      # Start the local development server
+npm run build    # Create the production build in dist/
+npm run preview  # Preview the production build locally
+npm run lint     # Run ESLint
+```
